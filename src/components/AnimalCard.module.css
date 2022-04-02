@@ -1,0 +1,35 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+}
+
+.card-content {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 500px) {
+  .card-content {
+    padding: 1rem;
+  }
+}

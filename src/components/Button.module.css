@@ -1,0 +1,10 @@
+.button {
+  padding: 5px 15px;
+  border: none;
+  background: lightblue;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  font: inherit;
+}
