@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AnimalCard from "./components/AnimalCard";
 import { animals } from "./components/animals";
+import List from "./components/List";
 
 class App extends Component {
   // Initialize state object that has a property called animals
@@ -21,20 +22,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>Animal Project</h1>
-
-        <ul className="cards">
-          {animals.map((animal) => (
-            <AnimalCard
-              key={animal.name}
-              name={animal.name}
-              likes={animal.likes}
-              // pass handleOnClick method as a prop called onClick, handleOnClick is a callback function, use arrow function to pass a callback to an event handler
-              // Passing params to event handler or callback using fat arrow function
-              onClick={() => this.handleOnClick(animal.name)}
-            />
-          ))}
-        </ul>
+        <h1>{animals.length} Animals</h1>
+        <List animals={this.state.animals} onClick={this.handleOnClick} />
       </>
     );
   }
