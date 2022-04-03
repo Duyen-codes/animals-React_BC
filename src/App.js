@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import AnimalCard from "./components/AnimalCard";
 import { animals } from "./components/animals";
 import List from "./components/List";
 
 class App extends Component {
   // Initialize state object that has a property called animals
-  state = { animals: animals };
+  state = { animals: animals, term: "" };
 
   handleOnClick = (name) => {
     const updatedAnimals = animals.map((animal) => {
