@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-const Button = (props) => {
+const Button = ({ likes, click }) => {
   return (
-    <button className={styles.button} onClick={props.onClick}>
+    <button className={styles.button} onClick={click}>
       Add likes
     </button>
   );

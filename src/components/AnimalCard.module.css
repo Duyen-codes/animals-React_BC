@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid #ddd;
+  background-color: rgb(250, 232, 210);
   border-radius: 5px;
   position: relative;
 }
@@ -12,6 +12,7 @@
   width: 0;
   height: 0;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .card::after {
@@ -22,6 +23,7 @@
   width: 0;
   height: 0;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .card:hover::before {
@@ -39,6 +41,24 @@
   border-bottom: 4px solid lightgreen;
   border-radius: 5px;
 }
+
+.cross-btn {
+  border: none;
+  background: rgb(228, 228, 228);
+  color: black;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.cross-btn:hover {
+  background: white;
+}
+
 .card img {
   border-radius: 5px 5px 0 0;
   max-width: 100%;

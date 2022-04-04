@@ -20,11 +20,8 @@ h1 {
   text-transform: capitalize;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 90%;
+#root {
+  padding: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
