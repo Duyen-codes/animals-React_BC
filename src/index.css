@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,7 @@
 
 body {
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -16,7 +19,7 @@ ul {
 
 h1 {
   text-align: center;
-  padding-block: 2.5rem;
+  padding-block: 2rem 0 1rem;
   text-transform: capitalize;
 }
 

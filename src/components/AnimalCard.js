@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import styles from "./AnimalCard.module.css";
 
-const AnimalCard = ({ name, likes, click, remove, dislikes, dislikeClick }) => {
+const AnimalCard = ({ name, likes, click, remove, searchTerm }) => {
   // console.log("Animal", props.likes);
   return (
     <li className={`${styles["card"]}`}>
@@ -21,6 +21,7 @@ const AnimalCard = ({ name, likes, click, remove, dislikes, dislikeClick }) => {
           <span> 👍 {likes}</span>
           <Button likes={likes} name={name} click={click} />
         </div>
+        <p>{searchTerm}</p>
       </div>
     </li>
   );

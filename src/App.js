@@ -5,7 +5,7 @@ import AnimalCard from "./components/AnimalCard";
 
 class App extends Component {
   // Initialize state object that has a property called animals
-  state = { animals: animals, dislike: 0 };
+  state = { animals: animals, search: "" };
 
   handleRemove = (name) => {
     const filteredArray = this.state.animals.filter(
@@ -27,12 +27,28 @@ class App extends Component {
     });
   };
 
+  searchHandler(e) {
+    this.setState({ search: e.target.value });
+  }
+
   render() {
+    const animalFilter = this.state.animals.filter((animal) => {
+      return animal.name
+        .toLocaleLowerCase()
+        .includes(this.state.search.toLocaleLowerCase());
+    });
+
     return (
       <>
         <h1>{this.state.animals.length} Animals</h1>
+        <input
+          type="text"
+          // onChange={this.searchHandler}
+          onChange={this.searchHandler.bind(this)}
+          value={this.state.search}
+        />
         <ul className={styles.cards}>
-          {this.state.animals.map((animal) => {
+          {animalFilter.map((animal) => {
             return (
               <AnimalCard
                 key={animal.name}
@@ -41,6 +57,7 @@ class App extends Component {
                 dislikes={this.state.dislike}
                 remove={this.handleRemove.bind(this, animal.name)}
                 click={() => this.handleAddLike(animal.name)}
+                searchTerm={this.state.search}
               />
             );
           })}
