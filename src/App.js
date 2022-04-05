@@ -57,7 +57,6 @@ class App extends Component {
                 dislikes={this.state.dislike}
                 remove={this.handleRemove.bind(this, animal.name)}
                 click={() => this.handleAddLike(animal.name)}
-                searchTerm={this.state.search}
               />
             );
           })}
